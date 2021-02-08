@@ -13,7 +13,8 @@ class Home(ListView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['title'] = 'Classic Blog Design'
+        context['most_popular_post'] = Post.objects.order_by('-views').first()
+        context['title'] = 'ProgBlog'
         return context
 
 
@@ -28,6 +29,7 @@ class PostsByCategory(ListView):
     
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['most_popular_post'] = Post.objects.filter(category__slug=self.kwargs['slug']).order_by('-views').first()
         context['title'] = Category.objects.get(slug=self.kwargs['slug'])
         return context
 
@@ -39,7 +41,6 @@ class GetPost(DetailView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
         context['comments'] = self.object.get_comments.all()
-        # print(self.object.get_comments.all())
         self.object.views = F('views') + 1
         self.object.save()
         self.object.refresh_from_db()

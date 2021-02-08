@@ -31,7 +31,7 @@ class PostAdmin(admin.ModelAdmin):
     search_fields = (
         'title',
     )
-    list_filter = ('category',)
+    list_filter = ('category', 'tags')
     readonly_fields = ('views', 'created_at', 'get_photo')
     fields = (
         'title',

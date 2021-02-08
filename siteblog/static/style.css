@@ -37,7 +37,7 @@
 
 .wrapper header.header .logo h2 a {
     color: #061e37;
-    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
@@ -578,7 +578,7 @@ section.blog-post-area h4 span.author-name {
     width: 55px;
 }
 .commententries .comment-details {
-    margin-left: 70px;
+    margin-left: 10px;
 }
 .single-blog-area form input {
     border: 1px solid #e6e6e6;
@@ -749,4 +749,9 @@ section.blog-post-area h4 span.author-name {
     font-family: Roboto;
     font-size: 15px;
     font-weight: 500;
+}
+
+.grid .portfolio-item img {
+    width: 100px;
+    height: auto;
 }

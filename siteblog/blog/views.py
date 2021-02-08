@@ -1,8 +1,9 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponse, Http404
 from django.views.generic import ListView, DetailView
 from django.db.models import F
 from .models import *
+from .forms import *
 
 class Home(ListView):
     model = Post
@@ -37,6 +38,8 @@ class GetPost(DetailView):
 
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super().get_context_data(**kwargs)
+        context['comments'] = self.object.get_comments.all()
+        # print(self.object.get_comments.all())
         self.object.views = F('views') + 1
         self.object.save()
         self.object.refresh_from_db()
@@ -68,3 +71,23 @@ class Search(ListView):
         context = super().get_context_data(**kwargs)
         context['s'] = f"s={self.request.GET.get('s')}&"
         return context
+
+def comment_post(request):
+    if not request.method == "POST":
+        return Http404()
+
+    form = PostCommentForm(request.POST)
+    if form.is_valid():
+        post = get_object_or_404(Post, pk=form.cleaned_data["post_id"])
+        PostComment(
+            post=post,
+            name=form.cleaned_data["name"],
+            email=form.cleaned_data["email"],
+            comment=form.cleaned_data["comment"]
+        ).save()
+        return redirect(post.get_absolute_url())
+    print(form.cleaned_data["name"])
+    print(form.cleaned_data["email"])
+    print(form.cleaned_data["comment"])
+    print(form.cleaned_data["post_id"])
+    return redirect(post.get_absolute_url())

@@ -35,14 +35,29 @@
                             </div>
 
                             <div class="commententries">
-                                <h3>Comments</h3>
+                                <h3>Комментарии</h3>
 
                                 <ul class="commentlist">
+                                    {% for comment in comments %}
                                     <li>
                                         <article class="comment">
-                                            <header class="comment-author">
-                                                <img src="img/author-1.jpg" alt="">
-                                            </header>
+                                            
+                                            <section class="comment-details">
+                                                <div class="author-name">
+                                                    <h5>{{ comment.name }}</h5>
+                                                    <p>{{ comment.created_at|date:"d.m.Y" }}</p>
+                                                </div>
+                                                <div class="comment-body">
+                                                    <p>{{ comment.comment }}</p>
+                                                </div>
+                                                
+                                            </section>
+                                        </article>
+                                    </li>    
+                                    {% endfor %}
+                                    <!-- <li>
+                                        <article class="comment">
+                                            
                                             <section class="comment-details">
                                                 <div class="author-name">
                                                     <h5><a href="#">Selina Gomez</a></h5>
@@ -60,83 +75,35 @@
                                                 </div>
                                             </section>
                                         </article>
-
-                                        <ul class="children">
-                                            <li>
-                                                <article class="comment">
-                                                    <header class="comment-author">
-                                                        <img src="img/author-2.jpg" alt="">
-                                                    </header>
-                                                    <section class="comment-details">
-                                                        <div class="author-name">
-                                                            <h5><a href="#">Khalid Hasan Zibon</a></h5>
-                                                            <p>February 25 2017</p>
-                                                        </div>
-                                                        <div class="comment-body">
-                                                            <p>is simply dummy text of the printing and typesetting
-                                                                industry. Lorem Ipsum has been the industry's
-                                                                standard </p>
-                                                        </div>
-                                                        <div class="reply">
-                                                            <p><span><a href="#"><i class="fa fa-thumbs-up"
-                                                                                    aria-hidden="true"></i></a>12</span><span><a
-                                                                    href="#"><i class="fa fa-reply"
-                                                                                aria-hidden="true"></i></a>7</span></p>
-                                                        </div>
-                                                    </section>
-                                                </article>
-                                            </li>
-                                        </ul>
-
-                                    </li>
-                                    <li>
-                                        <article class="comment">
-                                            <header class="comment-author">
-                                                <img src="img/author-3.jpg" alt="">
-                                            </header>
-                                            <section class="comment-details">
-                                                <div class="author-name">
-                                                    <h5><a href="#">Heath Ledger</a></h5>
-                                                    <p>February 25 2017</p>
-                                                </div>
-                                                <div class="comment-body">
-                                                    <p>is simply dummy text of the printing and typesetting industry.
-                                                        Lorem Ipsum has been the industry's standard </p>
-                                                </div>
-                                                <div class="reply">
-                                                    <p><span><a href="#"><i class="fa fa-thumbs-up"
-                                                                            aria-hidden="true"></i></a>12</span><span><a
-                                                            href="#"><i class="fa fa-reply" aria-hidden="true"></i></a>7</span>
-                                                    </p>
-                                                </div>
-                                            </section>
-                                        </article>
-                                    </li>
+                                    </li> -->
+                                    
                                 </ul>
 
                             </div>
-                            <form action="#" method="get">
+                            <form action="{% url 'comment_post' %}" method="post">
+                                {% csrf_token %}
+                                <input type="hidden" name="post_id" value="{{ post.pk }}">
                                 <div class="name">
-                                    <input type="text" name="" id="" placeholder="Name" class="name">
+                                    <input type="text" name="name" id="" placeholder="Имя" class="name">
                                 </div>
                                 <div class="email">
-                                    <input type="email" name="" id="" placeholder="Email" class="email">
+                                    <input type="email" name="email" id="" placeholder="Email" class="email">
                                 </div>
                                 <div class="comment">
-                                    <input type="text" name="" id="" placeholder="Comment" class="comment">
+                                    <input type="text" name="comment" id="" placeholder="Комментарий" class="comment">
                                 </div>
                                 <div class="post">
-                                    <input type="submit" value="Post">
+                                    <input type="submit" value="Отправить">
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="newsletter">
-                            <h2 class="sidebar-title">Search</h2>
+                            <h2 class="sidebar-title">Поиск</h2>
                             <form action="{% url 'search' %}" method="GET">
                                 <input type="text" name="s" id="" placeholder="Search...">
-                                <input type="submit" value="Search">
+                                <input type="submit" style="margin-top: 10px;" value="Search">
                             </form>
                         </div>
                         

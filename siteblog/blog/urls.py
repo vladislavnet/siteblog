@@ -7,4 +7,5 @@ urlpatterns = [
     path('post/<str:slug>/', GetPost.as_view(), name='post'),
     path('tag/<str:slug>/', PostByTags.as_view(), name='tag'),
     path('search/', Search.as_view(), name='search'),
+    path('comment_post/', comment_post, name='comment_post')
 ]

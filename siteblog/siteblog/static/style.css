@@ -37,7 +37,7 @@
 
 .wrapper header.header .logo h2 a {
     color: #061e37;
-    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     font-weight: 700;
     text-decoration: none;
@@ -65,7 +65,7 @@
 
 .wrapper header.header .menu ul li a {
     color: rgb(6, 30, 55);
-    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 15px;
     font-weight: 600;
     line-height: 70px;
@@ -94,7 +94,7 @@
 
 .wrapper section.bg-text-area .bg-text h3 {
     color: #fff;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 50px;
     font-weight: 700;
     text-align: center;
@@ -104,7 +104,7 @@
 
 .wrapper section.bg-text-area .bg-text p {
     color: #fff;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 15px;
     font-weight: 500;
     line-height: 33px;
@@ -137,7 +137,7 @@ section.blog-post-area .big-text h3 {
 }
 
 section.blog-post-area .big-text h3 a {
-    font-family: Geometria;
+    font-family: Roboto;
     font-weight: 700;
     font-size: 40px;
     color: #061e37;
@@ -146,7 +146,7 @@ section.blog-post-area .big-text h3 a {
 
 section.blog-post-area .big-text p {
     color: #061e37;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
@@ -176,7 +176,7 @@ section.blog-post-area .single-post {
 }
 
 section.blog-post-area h4 span {
-    font-family: Geometria;
+    font-family: Roboto;
     font-weight: 400;
     font-size: 15px;
     color: #061e37;
@@ -192,7 +192,7 @@ section.blog-post-area h4 span.author-name {
 }
 
 .blog-post-area .single-post h3 a {
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 28px;
     font-weight: 700;
     text-decoration: none;
@@ -201,7 +201,7 @@ section.blog-post-area h4 span.author-name {
 
 .blog-post-area .single-post p {
     color: #061e37;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 15px;
     font-weight: 400;
     line-height: 27px;
@@ -312,7 +312,7 @@ section.blog-post-area h4 span.author-name {
 
 .wrapper footer.footer .footer-menu ul li a {
     color: #fff;
-    font-family: "Raleway", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 15px;
     font-weight: 600;
     line-height: 70px;
@@ -347,7 +347,7 @@ section.blog-post-area h4 span.author-name {
 
 .single-blog-area h2 {
     color: #010101;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 38px;
     font-weight: 500;
     margin-bottom: 60px;
@@ -355,7 +355,7 @@ section.blog-post-area h4 span.author-name {
 }
 
 .single-blog-area p {
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 15px;
     font-weight: 500;
     line-height: 35px;
@@ -374,7 +374,7 @@ section.blog-post-area h4 span.author-name {
 .single-blog-area .for-style p span {
     color: #40c4ff;
     float: left;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 60px;
     font-weight: 400;
     margin: 18px 30px 20px 20px;
@@ -403,7 +403,7 @@ section.blog-post-area h4 span.author-name {
 
 .single-blog-area h3 {
     color: #757575;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 38px;
     font-style: italic;
     font-weight: 500;
@@ -464,7 +464,7 @@ section.blog-post-area h4 span.author-name {
 
 .single-blog-area .ads-area p {
     color: #fff;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 33px;
     font-weight: 500;
     line-height: 150px;
@@ -479,7 +479,7 @@ section.blog-post-area h4 span.author-name {
 
 .single-blog-area .commententries h3 {
     color: #000;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -524,7 +524,7 @@ section.blog-post-area h4 span.author-name {
 
 }
 .single-blog-area .commententries .author-name h5 a {
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 21px;
     font-weight: 500;
     text-decoration: none;
@@ -532,7 +532,7 @@ section.blog-post-area h4 span.author-name {
 }
 .single-blog-area .commententries .author-name h5 a {
     color: #000;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 21px;
     font-weight: 500;
     line-height: 10px;
@@ -541,14 +541,14 @@ section.blog-post-area h4 span.author-name {
 }
 .single-blog-area .commententries .author-name p {
     color: #000;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 13px;
     font-weight: 500;
     line-height: 10px;
     color: #989191
 }
 .single-blog-area .commententries .comment-body p {
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 15px;
     font-weight: 500;
     line-height: 25px;
@@ -556,7 +556,7 @@ section.blog-post-area h4 span.author-name {
 }
 .single-blog-area .commententries .reply p span {
     color: #989191;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 18px;
     font-weight: 500;
     margin-right: 50px;
@@ -578,7 +578,7 @@ section.blog-post-area h4 span.author-name {
     width: 55px;
 }
 .commententries .comment-details {
-    margin-left: 70px;
+    margin-left: 10px;
 }
 .single-blog-area form input {
     border: 1px solid #e6e6e6;
@@ -589,7 +589,7 @@ section.blog-post-area h4 span.author-name {
 }
 .single-blog-area form input[placeholder] {
     color: #000;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
 }
@@ -623,7 +623,7 @@ section.blog-post-area h4 span.author-name {
     background: #40c4ff none repeat scroll 0 0;
     bottom: 0;
     color: #fff;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 15px;
     font-weight: 500;
     padding: 14px 38px;
@@ -653,14 +653,14 @@ section.blog-post-area h4 span.author-name {
 }
 .single-blog-area .grid .portfolio-item .portfolio-text h5 a {
     color: #000;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 15px;
     font-weight: 500;
     line-height: 27px;
     text-decoration: none;
 }
 .single-blog-area .grid .portfolio-item .portfolio-text p {
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 13px;
     font-weight: 500;
     line-height: 20px;
@@ -674,7 +674,7 @@ section.blog-post-area h4 span.author-name {
     border-radius: 0;
     color: #000;
     display: inline-block;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 13px;
     font-weight: 500;
     margin-right: -2px;
@@ -699,7 +699,7 @@ section.blog-post-area h4 span.author-name {
 }
 .single-blog-area .sidebar-ads p {
     color: #fff;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 30px;
     font-weight: 500;
     position: absolute;
@@ -710,7 +710,7 @@ section.blog-post-area h4 span.author-name {
 .single-blog-area h2.sidebar-title {
     background: #efefef none repeat scroll 0 0;
     color: #000;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 16px;
     font-weight: 500;
     margin-bottom: 20px;
@@ -722,7 +722,7 @@ section.blog-post-area h4 span.author-name {
     background: #40c4ff none repeat scroll 0 0;
     border-radius: 5px;
     display: inline-block;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 13px;
     font-weight: 500;
     margin-right: 4px;
@@ -746,7 +746,7 @@ section.blog-post-area h4 span.author-name {
     background: #40c4ff;
     color: #fff;
     text-transform: uppercase;
-    font-family: Geometria;
+    font-family: Roboto;
     font-size: 15px;
     font-weight: 500;
 }

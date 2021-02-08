@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 
 '''
 Post
@@ -97,3 +98,27 @@ class Post(models.Model):
         verbose_name = "Пост"
         verbose_name_plural = "Посты"
         ordering = ['-created_at']
+
+
+class PostComment(models.Model):
+    '''
+    PostComment
+    ==============
+    post, name, email, comment
+    '''
+    post = models.ForeignKey(
+        'Post',
+        on_delete=models.CASCADE,
+        verbose_name="Комментарий к посту",
+        related_name='get_comments',
+    )
+    name = models.CharField(
+        max_length=200, 
+        verbose_name="Имя"
+    )
+    email = models.EmailField(verbose_name="Email")
+    comment = models.TextField(verbose_name="Комментарий")
+    created_at = models.DateTimeField(
+        default=timezone.now(),
+        verbose_name="Дата публикации"
+    )
